@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ember Starter Kit</title>
+  <link rel="stylesheet" href="stylesheets/app.css">
+</head>
+<body>
+
+  <script type="text/x-handlebars">
+    
+
+    {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="index">
+    
+  </script>
+
+  <header id="header" class="row">
+    <div class="identity large-12 columns">
+      <h1>Gherkin Magnets</h1>
+    </div>
+  </header>
+  
+  <div class="row">
+    <section id="feature-builder" class="large-9 columns">
+      <article class="feature row">
+        <header class="feature-header large-12 columns">
+          <h2 class="feature-title">
+            Feature:&nbsp;
+            <input type="text" placeholder="[feature_name]">
+          </h2>
+          <div class="feature-description large-12 columns">
+            <p>In order to <input type="text" placeholder="[goal]"></p>
+            <p>As a/an <input type="text" placeholder="[stakeholder]"></p>
+            <p>I want <input type="text" placeholder="[behavior]"></p>
+          </div>
+        </header>
+        
+        <div id="scenario-1" class="scenario large-12 columns">
+          <h3 class="scenario-name">
+            Scenario:&nbsp;
+            <input type="text" placeholder="[scenario_name]">
+          </h3>
+          <ul class="scenario-description">
+            <li class="magnet given">Given a user exists</li>
+          </ul>
+        </div>
+
+        <a href="#" class="scenario-new button">New Scenario</a>
+      </article>
+      <div class="feature-output row">
+        <h2>The Results</h2>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <div class="action-buttons">
+          <a href="#" class="feature-copy button">Copy to Clipboard</a>
+          <a href="#" class="feature-download button">Download Feature</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="magnets" class="large-3 columns">
+      <div id="givens" class="magnet-section row collapse">
+        <h2 class="magnet-section-title large-12 columns">Given</h2>
+        <ul class="magnet-list large-12 columns">
+          <li class="magnet given">Given a user exists</li>
+          <li class="magnet given">Given I am on <input type="text" placeholder="[page_name]"></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <script src="javascripts/libs/jquery-1.9.1.js"></script>
+  <script src="javascripts/libs/handlebars-1.0.0-rc.3.js"></script>
+  <script src="javascripts/libs/ember-1.0.0-rc.3.js"></script>
+  <script src="javascripts/app.js"></script>
+
+</body>
+</html>

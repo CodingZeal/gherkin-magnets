@@ -1,0 +1,81 @@
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you don't want to use normalize
+@import "normalize";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+
+.feature {
+  input {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    display: inline;
+    font-weight: bold;
+    padding: 3px 7px;
+    text-align: left;
+    width: auto;
+    &:focus {
+      background-color: #fff;
+    }
+  }
+}
+.magnet {
+  input {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    display: inline;
+    font-weight: bold;
+    padding: 3px 5px;
+    text-align: left;
+    width: auto;
+    &:focus {
+      background-color: #fff;
+    }
+  }
+}
+
+#header {
+  background: #41484D;
+  -moz-box-shadow:    0px 2px 3px 0px rgba(0,0,0,0.29);
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.29);
+  box-shadow:         0px 2px 3px 0px rgba(0,0,0,0.29);
+  color: #CCD18E;
+  h1 {
+    font-size: 24px;
+    color: #CCD18E;
+    line-height: 28px;
+  }
+}
+
+
+#feature-builder {
+  background: #EEEFF2;
+}
+.feature-output {
+  background: #FFFFFF;
+  -moz-box-shadow:    inset 0px 2px 2px 0px rgba(0,0,0,0.29);
+  -webkit-box-shadow: inset 0px 2px 2px 0px rgba(0,0,0,0.29);
+  box-shadow:         inset 0px 2px 2px 0px rgba(0,0,0,0.29);
+}
+
+
+#magnets {
+  background: #31373B;
+}
+.magnet-section-title {
+  -moz-box-shadow:    inset 3px 0px 3px 0px rgba(0,0,0,0.18);
+  -webkit-box-shadow: inset 3px 0px 3px 0px rgba(0,0,0,0.18);
+  box-shadow:         inset 3px 0px 3px 0px rgba(0,0,0,0.18);
+}
+#givens {
+  .magnet-section-title {
+    background: #6EBB9B;
+    color: rgba(0,0,0,0.35);
+  }
+}
+
