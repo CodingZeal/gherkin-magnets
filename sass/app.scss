@@ -66,16 +66,73 @@
 
 #magnets {
   background: #31373B;
+  padding: 0;
 }
 .magnet-section-title {
   -moz-box-shadow:    inset 3px 0px 3px 0px rgba(0,0,0,0.18);
   -webkit-box-shadow: inset 3px 0px 3px 0px rgba(0,0,0,0.18);
   box-shadow:         inset 3px 0px 3px 0px rgba(0,0,0,0.18);
+  color: rgba(0,0,0,0.35);
+  font-size: emCalc(24px);
+  padding: 10px emCalc(15px) !important;
+  margin: 0 0 emCalc(15px);
+}
+.magnet-list {
+  list-style-type: none;
+  padding: 10px emCalc(15px) !important;
+}
+.magnet {
+  border-radius: 3px;
+  background: #EEEFF2;
+  border: 1px solid rgba(0,0,0,0.35);
+  color: #31373B;
+  cursor: move;
+  font-size: emCalc(12px);
+  margin-bottom: 5px;
+  padding: emCalc(10px) emCalc(20px) emCalc(10px) emCalc(10px);
+  position: relative;
+  span {
+    display: block;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: emCalc(10px);
+  }
+  &.given {
+    span {
+      background-color: #6EBB9B;
+    }
+  }
+  &.when {
+    span {
+      background-color: #FCAA78;
+    }
+  }
+  &.then {
+    span {
+      background-color: #D58477;
+    }
+  }
 }
 #givens {
   .magnet-section-title {
     background: #6EBB9B;
-    color: rgba(0,0,0,0.35);
   }
+}
+#whens {
+  .magnet-section-title {
+    background: #FCAA78;
+  }
+}
+#thens {
+  .magnet-section-title {
+    background: #D58477;
+  }
+}
+
+.scenario-new {
+  background-color: #9B9B9B;
+  margin-right: 30px;
 }
 
