@@ -2335,54 +2335,54 @@ a.th { display: block; }
 /* line 42, ../sass/app.scss */
 #header { background: #41484D; -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.29); -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.29); box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.29); color: #CCD18E; }
 /* line 48, ../sass/app.scss */
-#header h1 { font-size: 24px; color: #CCD18E; line-height: 28px; }
+#header h1 { font-size: 24px; color: #CCD18E; line-height: 28px; margin-top: 10px; }
 
-/* line 56, ../sass/app.scss */
+/* line 57, ../sass/app.scss */
 #feature-builder { background: #EEEFF2; }
 
-/* line 59, ../sass/app.scss */
+/* line 60, ../sass/app.scss */
 .feature-output { background: #FFFFFF; -moz-box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.29); -webkit-box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.29); box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.29); }
 
-/* line 67, ../sass/app.scss */
+/* line 68, ../sass/app.scss */
 #magnets { background: #31373B; padding: 0; }
 
-/* line 71, ../sass/app.scss */
+/* line 72, ../sass/app.scss */
 .magnet-section-title { -moz-box-shadow: inset 3px 0px 3px 0px rgba(0, 0, 0, 0.18); -webkit-box-shadow: inset 3px 0px 3px 0px rgba(0, 0, 0, 0.18); box-shadow: inset 3px 0px 3px 0px rgba(0, 0, 0, 0.18); color: rgba(0, 0, 0, 0.35); font-size: 1.5em; padding: 10px 0.9375em !important; margin: 0 0 0.9375em; }
 
-/* line 80, ../sass/app.scss */
+/* line 81, ../sass/app.scss */
 .magnet-list, .scenario-description { list-style-type: none; padding: 10px 0.9375em !important; }
 
-/* line 84, ../sass/app.scss */
+/* line 85, ../sass/app.scss */
 .magnet { border-radius: 3px; background: #EEEFF2; border: 1px solid rgba(0, 0, 0, 0.35); color: #31373B; cursor: move; font-size: 0.75em; margin-bottom: 5px; padding: 0.625em 1.25em 0.625em 0.625em; position: relative; }
-/* line 94, ../sass/app.scss */
+/* line 95, ../sass/app.scss */
 .magnet span { display: block; height: 100%; line-height: 0; overflow: hidden; padding: 0 5px; position: absolute; right: 0; top: 0; min-width: 0.625em; }
-/* line 104, ../sass/app.scss */
+/* line 105, ../sass/app.scss */
 .magnet span img { cursor: pointer; margin-top: -6px; position: relative; top: 50%; }
-/* line 109, ../sass/app.scss */
+/* line 110, ../sass/app.scss */
 .magnet span img:hover { top: -35px; text-indent: -9999px; }
-/* line 116, ../sass/app.scss */
+/* line 117, ../sass/app.scss */
 .magnet.given span { background-color: #6EBB9B; }
-/* line 121, ../sass/app.scss */
+/* line 122, ../sass/app.scss */
 .magnet.when span { background-color: #FCAA78; }
-/* line 126, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .magnet.then span { background-color: #D58477; }
-/* line 130, ../sass/app.scss */
+/* line 131, ../sass/app.scss */
 .magnet:hover { background-color: #fff; }
 
-/* line 135, ../sass/app.scss */
+/* line 136, ../sass/app.scss */
 #givens .magnet-section-title { background: #6EBB9B; }
 
-/* line 140, ../sass/app.scss */
+/* line 141, ../sass/app.scss */
 #whens .magnet-section-title { background: #FCAA78; }
 
-/* line 145, ../sass/app.scss */
+/* line 146, ../sass/app.scss */
 #thens .magnet-section-title { background: #D58477; }
 
-/* line 151, ../sass/app.scss */
+/* line 152, ../sass/app.scss */
 .scenario { border-top: 2px dotted #979797; margin-top: 25px; padding-top: 25px; }
 
-/* line 156, ../sass/app.scss */
+/* line 157, ../sass/app.scss */
 .scenario-description { background: #fff; border-radius: 3px; -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.29); -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.29); box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.29); }
 
-/* line 165, ../sass/app.scss */
+/* line 166, ../sass/app.scss */
 .scenario-new { background-color: #9B9B9B; margin-right: 30px; }
