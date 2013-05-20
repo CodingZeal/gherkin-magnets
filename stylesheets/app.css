@@ -160,7 +160,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 html, body { font-size: 100%; }
 
 /* line 217, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_global.scss */
-body { background: white; color: #222222; padding: 0; margin: 0; font-family: Arial, "Helvetica Neue", "Helvetica", Helvetica, sans-serif; font-weight: normal; font-style: normal; line-height: 1; position: relative; }
+body { background: white; color: #41484d; padding: 0; margin: 0; font-family: Arial, "Helvetica Neue", "Helvetica", Helvetica, sans-serif; font-weight: normal; font-style: normal; line-height: 1; position: relative; }
 
 /* line 230, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_global.scss */
 a:focus { outline: none; }
@@ -801,7 +801,7 @@ th.hide-for-touch { display: table-cell !important; }
 p.lead { font-size: 1.21875em; line-height: 1.6; }
 
 /* line 112, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
-.subheader { line-height: 1.4; color: #6f6f6f; font-weight: 300; margin-top: 0.2em; margin-bottom: 0.5em; }
+.subheader { line-height: 1.4; color: #8a959d; font-weight: 300; margin-top: 0.2em; margin-bottom: 0.5em; }
 
 /* Typography resets */
 /* line 141, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
@@ -823,18 +823,18 @@ p aside { font-size: 0.875em; line-height: 1.35; font-style: italic; }
 
 /* Default header styles */
 /* line 178, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
-h1, h2, h3, h4, h5, h6 { font-family: ArialRoundedMTBold, Arial, sans-serif; font-weight: bold; font-style: normal; color: #222222; text-rendering: optimizeLegibility; margin-top: 0.2em; margin-bottom: 0.5em; line-height: 1.2125em; }
+h1, h2, h3, h4, h5, h6 { font-family: ArialRoundedMTBold, Arial, sans-serif; font-weight: bold; font-style: normal; color: #41484d; text-rendering: optimizeLegibility; margin-top: 0.2em; margin-bottom: 0.5em; line-height: 1.2125em; }
 /* line 188, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; }
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #8a959d; line-height: 0; }
 
 /* line 195, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
 h1 { font-size: 2.125em; }
 
 /* line 196, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
-h2 { font-size: 1.6875em; }
+h2 { font-size: 0.6875em; }
 
 /* line 197, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
-h3 { font-size: 1.375em; }
+h3 { font-size: 0.6875em; }
 
 /* line 198, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
 h4 { font-size: 1.125em; }
@@ -891,7 +891,7 @@ dl dd { margin-bottom: 0.75em; }
 
 /* Abbreviations */
 /* line 291, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
-abbr, acronym { text-transform: uppercase; font-size: 90%; color: #222222; border-bottom: 1px dotted #dddddd; cursor: help; }
+abbr, acronym { text-transform: uppercase; font-size: 90%; color: #41484d; border-bottom: 1px dotted #dddddd; cursor: help; }
 
 /* line 298, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
 abbr { text-transform: none; }
@@ -900,14 +900,14 @@ abbr { text-transform: none; }
 /* line 303, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
 blockquote { margin: 0 0 1.25em; padding: 0.5625em 1.25em 0 1.1875em; border-left: 1px solid #dddddd; }
 /* line 308, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
-blockquote cite { display: block; font-size: 0.8125em; color: #555555; }
+blockquote cite { display: block; font-size: 0.8125em; color: #707c84; }
 /* line 312, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
 blockquote cite:before { content: "\2014 \0020"; }
 /* line 317, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
-blockquote cite a, blockquote cite a:visited { color: #555555; }
+blockquote cite a, blockquote cite a:visited { color: #707c84; }
 
 /* line 323, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
-blockquote, blockquote p { line-height: 1.6; color: #6f6f6f; }
+blockquote, blockquote p { line-height: 1.6; color: #8a959d; }
 
 /* Microformats */
 /* line 329, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
@@ -927,9 +927,9 @@ blockquote, blockquote p { line-height: 1.6; color: #6f6f6f; }
   /* line 360, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
   h1 { font-size: 2.75em; }
   /* line 361, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
-  h2 { font-size: 2.3125em; }
+  h2 { font-size: 1.3125em; }
   /* line 362, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
-  h3 { font-size: 1.6875em; }
+  h3 { font-size: 1em; }
   /* line 363, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.6/scss/foundation/components/_type.scss */
   h4 { font-size: 1.4375em; } }
 /* Print styles.  Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
@@ -2350,27 +2350,39 @@ a.th { display: block; }
 .magnet-section-title { -moz-box-shadow: inset 3px 0px 3px 0px rgba(0, 0, 0, 0.18); -webkit-box-shadow: inset 3px 0px 3px 0px rgba(0, 0, 0, 0.18); box-shadow: inset 3px 0px 3px 0px rgba(0, 0, 0, 0.18); color: rgba(0, 0, 0, 0.35); font-size: 1.5em; padding: 10px 0.9375em !important; margin: 0 0 0.9375em; }
 
 /* line 80, ../sass/app.scss */
-.magnet-list { list-style-type: none; padding: 10px 0.9375em !important; }
+.magnet-list, .scenario-description { list-style-type: none; padding: 10px 0.9375em !important; }
 
 /* line 84, ../sass/app.scss */
 .magnet { border-radius: 3px; background: #EEEFF2; border: 1px solid rgba(0, 0, 0, 0.35); color: #31373B; cursor: move; font-size: 0.75em; margin-bottom: 5px; padding: 0.625em 1.25em 0.625em 0.625em; position: relative; }
 /* line 94, ../sass/app.scss */
-.magnet span { display: block; height: 100%; position: absolute; right: 0; top: 0; width: 0.625em; }
-/* line 103, ../sass/app.scss */
+.magnet span { display: block; height: 100%; line-height: 0; overflow: hidden; padding: 0 5px; position: absolute; right: 0; top: 0; min-width: 0.625em; }
+/* line 104, ../sass/app.scss */
+.magnet span img { cursor: pointer; margin-top: -6px; position: relative; top: 50%; }
+/* line 109, ../sass/app.scss */
+.magnet span img:hover { top: -35px; text-indent: -9999px; }
+/* line 116, ../sass/app.scss */
 .magnet.given span { background-color: #6EBB9B; }
-/* line 108, ../sass/app.scss */
+/* line 121, ../sass/app.scss */
 .magnet.when span { background-color: #FCAA78; }
-/* line 113, ../sass/app.scss */
+/* line 126, ../sass/app.scss */
 .magnet.then span { background-color: #D58477; }
+/* line 130, ../sass/app.scss */
+.magnet:hover { background-color: #fff; }
 
-/* line 119, ../sass/app.scss */
+/* line 135, ../sass/app.scss */
 #givens .magnet-section-title { background: #6EBB9B; }
 
-/* line 124, ../sass/app.scss */
+/* line 140, ../sass/app.scss */
 #whens .magnet-section-title { background: #FCAA78; }
 
-/* line 129, ../sass/app.scss */
+/* line 145, ../sass/app.scss */
 #thens .magnet-section-title { background: #D58477; }
 
-/* line 134, ../sass/app.scss */
+/* line 151, ../sass/app.scss */
+.scenario { border-top: 2px dotted #979797; margin-top: 25px; padding-top: 25px; }
+
+/* line 156, ../sass/app.scss */
+.scenario-description { background: #fff; border-radius: 3px; -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.29); -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.29); box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.29); }
+
+/* line 165, ../sass/app.scss */
 .scenario-new { background-color: #9B9B9B; margin-right: 30px; }

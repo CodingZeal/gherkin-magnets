@@ -94,10 +94,23 @@
   span {
     display: block;
     height: 100%;
+    line-height: 0;
+    overflow: hidden;
+    padding: 0 5px;
     position: absolute;
     right: 0;
     top: 0;
-    width: emCalc(10px);
+    min-width: emCalc(10px);
+    img {
+      cursor: pointer;
+      margin-top: -6px;
+      position: relative;
+      top: 50%;
+      &:hover {
+        top: -35px;
+        text-indent: -9999px;
+      }
+    }
   }
   &.given {
     span {
@@ -114,6 +127,9 @@
       background-color: #D58477;
     }
   }
+  &:hover {
+    background-color: #fff;
+  }
 }
 #givens {
   .magnet-section-title {
@@ -129,6 +145,21 @@
   .magnet-section-title {
     background: #D58477;
   }
+}
+
+
+.scenario {
+  border-top: 2px dotted #979797;
+  margin-top: 25px;
+  padding-top: 25px;
+}
+.scenario-description {
+  @extend .magnet-list;
+  background: #fff;
+  border-radius: 3px;
+  -moz-box-shadow:    0px 0px 4px 0px rgba(0,0,0,0.29);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.29);
+  box-shadow:         0px 0px 4px 0px rgba(0,0,0,0.29);
 }
 
 .scenario-new {
