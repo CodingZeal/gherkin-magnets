@@ -46,4 +46,12 @@ $(function(){
     $(this).parent().parent().remove();
   });
 
+  var text = $('article.feature').text();
+  $('#rendered-feature').html(text);
+
+  $('#feature-builder').change(function(){
+    text = $('article.feature').text();
+    $('#rendered-feature').html(text);
+  });
+
 });

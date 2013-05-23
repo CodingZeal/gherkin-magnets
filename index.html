@@ -6,10 +6,12 @@
   <link rel="stylesheet" href="stylesheets/app.css">
 </head>
 <body> 
-
-  <header id="header" class="row">
-    <div class="identity large-12 columns">
-      <h1><img src="images/gherkin-magnets-logo.png" alt=""> Gherkin Magnets</h1>
+  
+  <header id="header">
+    <div class="row">
+      <div class="identity large-12 columns">
+        <h1><img src="images/gherkin-magnets-logo.png" alt=""> Gherkin Magnets</h1>
+      </div>
     </div>
   </header>
   
@@ -50,11 +52,13 @@
       </article>
 
       <div class="feature-output row">
-        <h2>The Results</h2>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <div class="action-buttons">
-          <a href="#" class="feature-copy button">Copy to Clipboard</a>
-          <a href="#" class="feature-download button">Download Feature</a>
+        <div class="small-12 columns">
+          <h2>The Results</h2>
+          <div id="rendered-feature"></div>
+          <div class="action-buttons">
+            <a href="#" class="feature-copy button">Copy to Clipboard</a>
+            <a href="#" class="feature-download button">Download Feature</a>
+          </div>
         </div>
       </div>
     </section>

@@ -62,6 +62,8 @@
   -moz-box-shadow:    inset 0px 2px 2px 0px rgba(0,0,0,0.29);
   -webkit-box-shadow: inset 0px 2px 2px 0px rgba(0,0,0,0.29);
   box-shadow:         inset 0px 2px 2px 0px rgba(0,0,0,0.29);
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 
@@ -151,7 +153,9 @@
   }
 }
 
-
+#scenario-template {
+  display: none;
+}
 .scenario {
   border-top: 2px dotted #979797;
   margin-top: 25px;
@@ -174,3 +178,12 @@
   margin-right: 30px;
 }
 
+#rendered-feature {
+  padding: 10px;
+  background: #fff;
+  border-radius: 3px;
+  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.29);
+  margin-bottom: 20px;
+}
