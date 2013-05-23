@@ -81,6 +81,9 @@
 .magnet-list {
   list-style-type: none;
   padding: 10px emCalc(15px) !important;
+  .remove-magnet {
+    display:none;
+  }
 }
 .magnet {
   border-radius: 3px;
@@ -154,13 +157,16 @@
   margin-top: 25px;
   padding-top: 25px;
 }
-.scenario-description {
+.scenario-steps {
   @extend .magnet-list;
   background: #fff;
   border-radius: 3px;
   -moz-box-shadow:    0px 0px 4px 0px rgba(0,0,0,0.29);
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.29);
   box-shadow:         0px 0px 4px 0px rgba(0,0,0,0.29);
+  .remove-magnet {
+    display: inline;
+  }
 }
 
 .scenario-new {
