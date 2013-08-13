@@ -24,12 +24,35 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="features">
-
+    {{render "feature-menu"}}
   </script>
 
   <script type="text/x-handlebars" data-template-name="feature">
-    {{input title}}
+    <div class="row">
+      <section id="feature-builder" class="large-9 columns">
+        <article class="feature row">
+          <header class="feature-header large-12 columns">
+            <h2 class="feature-title">
+              Feature:&nbsp;
+              {{view Ember.TextField valueBinding="title" placeholder="[feature_name]"}}
+            </h2>
+            <div class="feature-description large-12 columns">
+              <p>In order to {{view Ember.TextField valueBinding="storyGoal" placeholder="[goal]"}}</p>
+              <p>As a/an {{view Ember.TextField valueBinding="storyStakeholder" placeholder="[stakeholder]"}}</p>
+              <p>I want {{view Ember.TextField valueBinding="storyBehavior" placeholder="[behavior]"}}</p>
+            </div>
+          </header>
+        </article>
+      </section>
+    </div>
   </script>
+
+  <script type="text/x-handlebars" data-template-name="_feature-menu">
+    {{#each feature in controller}}
+      {{#linkTo "feature" feature}}{{ feature.id }}{{/linkTo}}
+    {{/each}}
+  </script>
+
 
   <script type="text/x-handlebars" data-template-name="featurex">
 
