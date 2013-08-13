@@ -59,7 +59,7 @@ App.Feature = DS.Model.extend({
 });
 
 App.Scenario = DS.Model.extend({
-  scenarioSteps: DS.hasMany('App.ScenarioStep')
+  scenarioSteps: DS.hasMany('App.ScenarioStep'),
   scenarioTitle: DS.attr('scenarioTitle')
 });
 
