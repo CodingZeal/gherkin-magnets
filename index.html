@@ -81,8 +81,19 @@
         {{view Ember.TextField valueBinding="title" placeholder="[scenario_title]"}}
       </h3>
       <ul class="scenario-steps connected-sortable nested-sortable">
+        {{render "steps" steps}}
       </ul>
     </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="steps">
+      {{#each step in controller}}
+        {{render "step" step}}
+      {{/each}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="step">
+    <li {{bindAttr class=":magnet type"}}>{{title}}<span><img class="remove-magnet" src="images/delete-icon.png" alt=""></span></li>
   </script>
 
   <script type="text/x-handlebars" data-template-name="featurex">

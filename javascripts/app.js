@@ -6,7 +6,9 @@ App = Ember.Application.create({
 App.Router.map(function() {
   this.resource('features', {path: '/features'});
   this.resource('feature', {path:'/feature/:feature_id'}, function(){
-    this.resource('scenarios', {path:'/scenario/:scenario_id'});
+    this.resource('scenarios', {path:'/scenario/:scenario_id'}, function(){
+      this.resource('steps', {path: '/steps/:step_id'});
+    });
   });
 });
 
@@ -43,13 +45,24 @@ App.ScenarioRoute = Ember.Route.extend({
   }
 });
 
+App.StepsRoute = Ember.Route.extend({
+  model: function() {
+    return App.Step.find();
+  }
+});
+
+App.StepRoute = Ember.Route.extend({
+  model: function(params) {
+    return App.Step.find(params.step_id);
+  }
+});
 
 // Controllers
 App.FeaturesController = Ember.ArrayController.extend();
 
 App.ScenariosController = Ember.ArrayController.extend();
 
-App.ScenarioStepsController = Ember.ArrayController.extend();
+App.StepsController = Ember.ArrayController.extend();
 
 // Models
 App.Store = DS.Store.extend ({
@@ -66,11 +79,11 @@ App.Feature = DS.Model.extend({
 });
 
 App.Scenario = DS.Model.extend({
-  scenarioSteps: DS.hasMany('App.ScenarioStep'),
+  steps: DS.hasMany('App.Step'),
   title: DS.attr('title')
 });
 
-App.ScenarioStep = DS.Model.extend({
+App.Step = DS.Model.extend({
   type: DS.attr('type'),
   title: DS.attr('title')
 });
@@ -99,7 +112,7 @@ App.Feature.FIXTURES = [
       goal: 'identify a feature',
       stakeholder: 'user',
       behavior: 'edit a feature name',
-      scenarios: []
+      scenarios: [2]
     },
     {
       id: 4,
@@ -107,7 +120,7 @@ App.Feature.FIXTURES = [
       goal: 'identify a feature',
       stakeholder: 'user',
       behavior: 'edit a feature name',
-      scenarios: []
+      scenarios: [2]
     },
     {
       id: 5,
@@ -115,7 +128,7 @@ App.Feature.FIXTURES = [
       goal: 'identify a feature',
       stakeholder: 'user',
       behavior: 'edit a feature name',
-      scenarios: []
+      scenarios: [2]
     }
 ];
 
@@ -123,26 +136,26 @@ App.Scenario.FIXTURES = [
     {
       id: 1,
       title: '',
-      scenarioSteps: []
+      steps: []
     },
     {
       id: 2,
       title: 'Test scenario',
-      scenarioSteps: [1, 2, 3]
+      steps: [1, 2, 3]
     },
     {
       id: 3,
       title: '',
-      scenarioSteps: []
+      steps: []
     },
     {
       id: 4,
       title: '',
-      scenarioSteps: []
+      steps: []
     }
 ];
 
-App.ScenarioStep.FIXTURES = [
+App.Step.FIXTURES = [
     {
       id: 1,
       type: 'given',
