@@ -6,7 +6,8 @@
   <link rel="stylesheet" href="stylesheets/app.css">
 </head>
 <body> 
-  
+
+  <script type="text/x-handlebars" data-template-name="application">
   <header id="header">
     <div class="row">
       <div class="identity large-12 columns">
@@ -14,83 +15,150 @@
       </div>
     </div>
   </header>
+
+  {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="index">
+
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="features">
+
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="feature">
+    {{input title}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="featurex">
+
+    <div class="row">
+      <section id="feature-builder" class="large-9 columns">
+        <article class="feature row">
+          <header class="feature-header large-12 columns">
+            <h2 class="feature-title">
+              Feature:&nbsp;
+              {{#each feature in controller }}
+                {{feature.title}}
+              {{/each}}
+              <input type="text" placeholder="[feature_name]">
+            </h2>
+            <div class="feature-description large-12 columns">
+              <p>In order to <input type="text" placeholder="[goal]"></p>
+              <p>As a/an <input type="text" placeholder="[stakeholder]"></p>
+              <p>I want <input type="text" placeholder="[behavior]"></p>
+            </div>
+          </header>
+          
+          <div id="scenario-1" class="scenario large-12 columns">
+            <h3 class="scenario-name">
+              Scenario:&nbsp;
+              <input type="text" placeholder="[scenario_name]">
+            </h3>
+            <ul class="scenario-steps connected-sortable nested-sortable">
+            </ul>
+          </div>
+
+          <div id="scenario-template" class="scenario large-12 columns">
+            <h3 class="scenario-name">
+              Scenario:&nbsp;
+              <input type="text" placeholder="[scenario_name]">
+            </h3>
+            <ul class="scenario-steps connected-sortable nested-sortable">
+            </ul>
+          </div>
+
+          <a href="#" class="scenario-new button right">New Scenario</a>
+        </article>
+      </section>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="_old-layout">
   
-  <div class="row">
-    <section id="feature-builder" class="large-9 columns">
-      <article class="feature row">
-        <header class="feature-header large-12 columns">
-          <h2 class="feature-title">
-            Feature:&nbsp;
-            <input type="text" placeholder="[feature_name]">
-          </h2>
-          <div class="feature-description large-12 columns">
-            <p>In order to <input type="text" placeholder="[goal]"></p>
-            <p>As a/an <input type="text" placeholder="[stakeholder]"></p>
-            <p>I want <input type="text" placeholder="[behavior]"></p>
+    <div class="row">
+      <section id="feature-builder" class="large-9 columns">
+        <article class="feature row">
+          <header class="feature-header large-12 columns">
+            <h2 class="feature-title">
+              Feature:&nbsp;
+              <input type="text" placeholder="[feature_name]">
+            </h2>
+            <div class="feature-description large-12 columns">
+              <p>In order to <input type="text" placeholder="[goal]"></p>
+              <p>As a/an <input type="text" placeholder="[stakeholder]"></p>
+              <p>I want <input type="text" placeholder="[behavior]"></p>
+            </div>
+          </header>
+          
+          <div id="scenario-1" class="scenario large-12 columns">
+            <h3 class="scenario-name">
+              Scenario:&nbsp;
+              <input type="text" placeholder="[scenario_name]">
+            </h3>
+            <ul class="scenario-steps connected-sortable nested-sortable">
+            </ul>
           </div>
-        </header>
-        
-        <div id="scenario-1" class="scenario large-12 columns">
-          <h3 class="scenario-name">
-            Scenario:&nbsp;
-            <input type="text" placeholder="[scenario_name]">
-          </h3>
-          <ul class="scenario-steps connected-sortable nested-sortable">
+
+          <div id="scenario-template" class="scenario large-12 columns">
+            <h3 class="scenario-name">
+              Scenario:&nbsp;
+              <input type="text" placeholder="[scenario_name]">
+            </h3>
+            <ul class="scenario-steps connected-sortable nested-sortable">
+            </ul>
+          </div>
+
+          <a href="#" class="scenario-new button right">New Scenario</a>
+        </article>
+
+        <div class="feature-output row">
+          <div class="small-12 columns">
+            <h2>The Results</h2>
+            <div id="rendered-feature"></div>
+            <div class="action-buttons">
+              <a href="#" class="feature-copy button">Copy to Clipboard</a>
+              <a href="#" class="feature-download button">Download Feature</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="magnets" class="large-3 columns">
+        <div id="givens" class="magnet-section row collapse">
+          <h2 class="magnet-section-title large-12 columns">Given</h2>
+          <ul class="magnet-list large-12 columns connected-sortable">
+            <li class="magnet given">Given a user exists<span><img class="remove-magnet" src="images/delete-icon.png" alt=""></span></li>
+            <li class="magnet given">Given I am on <input type="text" placeholder="[page_name]"><span></span></li>
           </ul>
         </div>
 
-        <div id="scenario-template" class="scenario large-12 columns">
-          <h3 class="scenario-name">
-            Scenario:&nbsp;
-            <input type="text" placeholder="[scenario_name]">
-          </h3>
-          <ul class="scenario-steps connected-sortable nested-sortable">
+        <div id="whens" class="magnet-section row collapse">
+          <h2 class="magnet-section-title large-12 columns">When</h2>
+          <ul class="magnet-list large-12 columns connected-sortable">
+            <li class="magnet when">Given a user exists<span></span></li>
+            <li class="magnet when">Given I am on <input type="text" placeholder="[page_name]"><span></span></li>
           </ul>
         </div>
 
-        <a href="#" class="scenario-new button right">New Scenario</a>
-      </article>
-
-      <div class="feature-output row">
-        <div class="small-12 columns">
-          <h2>The Results</h2>
-          <div id="rendered-feature"></div>
-          <div class="action-buttons">
-            <a href="#" class="feature-copy button">Copy to Clipboard</a>
-            <a href="#" class="feature-download button">Download Feature</a>
-          </div>
+        <div id="thens" class="magnet-section row collapse">
+          <h2 class="magnet-section-title large-12 columns">Then</h2>
+          <ul class="magnet-list large-12 columns connected-sortable">
+            <li class="magnet then">Given a user exists<span></span></li>
+            <li class="magnet then">Given I am on <input type="text" placeholder="[page_name]"><span></span></li>
+          </ul>
         </div>
-      </div>
-    </section>
-
-    <section id="magnets" class="large-3 columns">
-      <div id="givens" class="magnet-section row collapse">
-        <h2 class="magnet-section-title large-12 columns">Given</h2>
-        <ul class="magnet-list large-12 columns connected-sortable">
-          <li class="magnet given">Given a user exists<span><img class="remove-magnet" src="images/delete-icon.png" alt=""></span></li>
-          <li class="magnet given">Given I am on <input type="text" placeholder="[page_name]"><span></span></li>
-        </ul>
-      </div>
-
-      <div id="whens" class="magnet-section row collapse">
-        <h2 class="magnet-section-title large-12 columns">When</h2>
-        <ul class="magnet-list large-12 columns connected-sortable">
-          <li class="magnet when">Given a user exists<span></span></li>
-          <li class="magnet when">Given I am on <input type="text" placeholder="[page_name]"><span></span></li>
-        </ul>
-      </div>
-
-      <div id="thens" class="magnet-section row collapse">
-        <h2 class="magnet-section-title large-12 columns">Then</h2>
-        <ul class="magnet-list large-12 columns connected-sortable">
-          <li class="magnet then">Given a user exists<span></span></li>
-          <li class="magnet then">Given I am on <input type="text" placeholder="[page_name]"><span></span></li>
-        </ul>
-      </div>
-    </section>
-  </div>
+      </section>
+    </div>
+  </script>
 
   <script src="javascripts/libs/jquery-1.9.1.js"></script>
+  <script src="javascripts/libs/handlebars-1.0.0-rc.4.js"></script>
+  <script src="javascripts/libs/ember-1.0.0-rc.6.1.js"></script>
+   <script src="javascripts/libs/ember-data.js"></script>
+  <script src="javascripts/app.js"></script>
+
   <script src="javascripts/libs/jquery-ui-1.10.3.custom.js"></script>  
   <script src="javascripts/libs/jquery-ui.nestedSortable.js"></script>
   <script src="javascripts/scripts.js"></script>
