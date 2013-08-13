@@ -53,19 +53,19 @@ App.Store = DS.Store.extend ({
 App.Feature = DS.Model.extend({
   scenarios: DS.hasMany('App.Scenario'),
   title: DS.attr('title'),
-  storyGoal: DS.attr('storyGoal'),
-  storyStakeholder: DS.attr('storyStakeholder'),
-  storyBehavior: DS.attr('storyBehavior')
+  goal: DS.attr('goal'),
+  stakeholder: DS.attr('stakeholder'),
+  behavior: DS.attr('behavior')
 });
 
 App.Scenario = DS.Model.extend({
   scenarioSteps: DS.hasMany('App.ScenarioStep'),
-  scenarioTitle: DS.attr('scenarioTitle')
+  title: DS.attr('title')
 });
 
 App.ScenarioStep = DS.Model.extend({
-  stepType: DS.attr('stepType'),
-  stepTitle: DS.attr('stepTitle')
+  type: DS.attr('type'),
+  title: DS.attr('title')
 });
 
 // Fixtures
@@ -73,41 +73,41 @@ App.Feature.FIXTURES = [
     {
       id: 1,
       title: 'Fixture object 1',
-      storyGoal: '',
-      storyStakeholder: '',
-      storyBehavior: '',
+      goal: '',
+      stakeholder: '',
+      behavior: '',
       scenarios: []
     },
     {
       id: 2,
       title: 'Edit a feature name',
-      storyGoal: 'identify a feature',
-      storyStakeholder: 'user',
-      storyBehavior: 'edit a feature name',
-      scenarios: [2]
+      goal: 'identify a feature',
+      stakeholder: 'user',
+      behavior: 'edit a feature name',
+      scenarios: [1, 2]
     },
     {
       id: 3,
       title: 'Fixture object 3',
-      storyGoal: 'identify a feature',
-      storyStakeholder: 'user',
-      storyBehavior: 'edit a feature name',
+      goal: 'identify a feature',
+      stakeholder: 'user',
+      behavior: 'edit a feature name',
       scenarios: []
     },
     {
       id: 4,
       title: 'Fixture object 4',
-      storyGoal: 'identify a feature',
-      storyStakeholder: 'user',
-      storyBehavior: 'edit a feature name',
+      goal: 'identify a feature',
+      stakeholder: 'user',
+      behavior: 'edit a feature name',
       scenarios: []
     },
     {
       id: 5,
       title: 'Fixture object 5',
-      storyGoal: 'identify a feature',
-      storyStakeholder: 'user',
-      storyBehavior: 'edit a feature name',
+      goal: 'identify a feature',
+      stakeholder: 'user',
+      behavior: 'edit a feature name',
       scenarios: []
     }
 ];
@@ -115,22 +115,22 @@ App.Feature.FIXTURES = [
 App.Scenario.FIXTURES = [
     {
       id: 1,
-      scenarioTitle: '',
+      title: '',
       scenarioSteps: []
     },
     {
       id: 2,
-      scenarioTitle: 'Test scenario',
+      title: 'Test scenario',
       scenarioSteps: [1, 2, 3]
     },
     {
       id: 3,
-      scenarioTitle: '',
+      title: '',
       scenarioSteps: []
     },
     {
       id: 4,
-      scenarioTitle: '',
+      title: '',
       scenarioSteps: []
     }
 ];
@@ -138,17 +138,17 @@ App.Scenario.FIXTURES = [
 App.ScenarioStep.FIXTURES = [
     {
       id: 1,
-      stepType: 'given',
-      stepTitle: 'Given I am on the feature builder'
+      type: 'given',
+      title: 'Given I am on the feature builder'
     },
     {
       id: 2,
-      stepType: 'when',
-      stepTitle: 'When I fill out "goal" with "be more efficient"'
+      type: 'when',
+      title: 'When I fill out "goal" with "be more efficient"'
     },
     {
       id: 3,
-      stepType: 'then',
-      stepTitle: 'Then I will see "be more efficient" within "goal"'
+      type: 'then',
+      title: 'Then I will see "be more efficient" within "goal"'
     }
 ];
