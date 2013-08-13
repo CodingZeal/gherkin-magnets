@@ -4,7 +4,7 @@ App = Ember.Application.create({
 
 App.Router.map(function() {
   // put your routes here
-  this.resource('features');
+  this.resource('features', {path: '/features'});
   this.resource('feature', {path:'/feature/:feature_id'});
 });
 
@@ -27,6 +27,7 @@ App.FeatureRoute = Ember.Route.extend({
 });
 
 App.FeaturesController = Ember.ArrayController.extend();
+
 App.FeatureController = Ember.ObjectController.extend();
 
 App.Store = DS.Store.extend ({
@@ -43,5 +44,8 @@ App.Feature = DS.Model.extend({
 
 App.Feature.FIXTURES = [
     {id: 1, title: 'Fixture object 1', storyGoal: '', storyStakeholder: '', storyBehavior: ''},
-    {id: 2, title: 'Edit a feature name', storyGoal: 'identify a feature', storyStakeholder: 'user', storyBehavior: 'edit a feature name'}
+    {id: 2, title: 'Edit a feature name', storyGoal: 'identify a feature', storyStakeholder: 'user', storyBehavior: 'edit a feature name'},
+    {id: 3, title: 'Fixture object 3', storyGoal: 'identify a feature', storyStakeholder: 'user', storyBehavior: 'edit a feature name'},
+    {id: 4, title: 'Fixture object 4', storyGoal: 'identify a feature', storyStakeholder: 'user', storyBehavior: 'edit a feature name'},
+    {id: 5, title: 'Fixture object 5', storyGoal: 'identify a feature', storyStakeholder: 'user', storyBehavior: 'edit a feature name'}
 ];

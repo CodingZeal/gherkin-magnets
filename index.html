@@ -11,7 +11,7 @@
   <header id="header">
     <div class="row">
       <div class="identity large-12 columns">
-        <h1><img src="images/gherkin-magnets-logo.png" alt=""> Gherkin Magnets</h1>
+        <h1>{{#linkTo "features"}}<img src="images/gherkin-magnets-logo.png" alt=""> Gherkin Magnets{{/linkTo}}</h1>
       </div>
     </div>
   </header>
@@ -24,7 +24,26 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="features">
-    {{render "feature-menu"}}
+    <div class="row">
+      <section id="feature-builder" class="large-9 columns">
+        <article class="feature row">
+          <header class="feature-header large-12 columns">
+            {{ partial "featureMenu" }}
+          </header>
+        </article>
+      </section>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="featureMenu">
+    <h2 class="feature-title">Features</h2>
+    <div class="feature-list large-12 columns">
+      <ul>
+        {{#each feature in controller}}
+          <li>{{#linkTo "feature" feature}}{{ feature.title }}{{/linkTo}}</li>
+        {{/each}}
+      </ul>
+    </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name="feature">
@@ -45,12 +64,6 @@
         </article>
       </section>
     </div>
-  </script>
-
-  <script type="text/x-handlebars" data-template-name="_feature-menu">
-    {{#each feature in controller}}
-      {{#linkTo "feature" feature}}{{ feature.id }}{{/linkTo}}
-    {{/each}}
   </script>
 
 
