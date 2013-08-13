@@ -10,6 +10,9 @@ App.Router.map(function() {
   });
 });
 
+App.ApplicationRoute = Ember.Route.extend({
+});
+
 App.IndexRoute = Ember.Route.extend({
   model: function() {
     return ['red', 'yellow', 'blue'];
@@ -34,11 +37,15 @@ App.ScenariosRoute = Ember.Route.extend({
   }
 });
 
+App.ScenarioRoute = Ember.Route.extend({
+  model: function(params) {
+    return App.Scenario.find(params.scenario_id);
+  }
+});
+
 
 // Controllers
 App.FeaturesController = Ember.ArrayController.extend();
-
-App.FeatureController = Ember.ObjectController.extend();
 
 App.ScenariosController = Ember.ArrayController.extend();
 
@@ -76,7 +83,7 @@ App.Feature.FIXTURES = [
       goal: '',
       stakeholder: '',
       behavior: '',
-      scenarios: []
+      scenarios: [2]
     },
     {
       id: 2,

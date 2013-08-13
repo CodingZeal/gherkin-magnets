@@ -61,11 +61,29 @@
               <p>I want {{view Ember.TextField valueBinding="behavior" placeholder="[behavior]"}}</p>
             </div>
           </header>
+          {{render "scenarios" scenarios}}
         </article>
       </section>
     </div>
   </script>
+  <script type="text/x-handlebars" data-template-name="scenarios">
+    <div class="scenarios">
+      {{#each scenario in controller}}
+        {{render "scenario" scenario}}
+      {{/each}}
+    </div>
+  </script>
 
+  <script type="text/x-handlebars" data-template-name="scenario">
+    <div id="scenario-{{ id }}" class="scenario large-12 columns">
+      <h3 class="scenario-name">
+        Scenario:&nbsp;
+        {{view Ember.TextField valueBinding="title" placeholder="[scenario_title]"}}
+      </h3>
+      <ul class="scenario-steps connected-sortable nested-sortable">
+      </ul>
+    </div>
+  </script>
 
   <script type="text/x-handlebars" data-template-name="featurex">
 
